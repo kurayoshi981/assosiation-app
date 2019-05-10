@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h3 class="card-title text-center">投稿</h3>
+            <%= form_with model: @post, url: { action: :create } do |f| %>
+            
+            <div class="form-group">
+              <%= f.label :名前 %>
+              <%= f.text_field :answer, autofocus: true , class: "form-control", placeholder: "答えを入力してください" %>
+            </div>
+            <div class="form-group">
+                <%= f.label :内容 %>
+                <%= f.text_area :content, autofocus: true , class: "form-control", placeholder: "内容を入力してください" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :ヒント %>
+              <%= f.text_field :hint01, autofocus: true , class: "form-control", placeholder: "ヒント１を入力してください" %>
+            </div>
+                <div class="form-group">
+                <%= f.label :ヒント2 %>
+                <%= f.text_field :hint02, autofocus: true , class: "form-control", placeholder: "ヒント２を入力してください" %>
+            </div>
+            <div class="form-group">
+                <%= f.label :ヒント3 %>
+                <%= f.text_field :hint03, autofocus: true , class: "form-control", placeholder: "ヒント３を入力してください" %>
+            </div>
+            <div class="form-group">
+                <%= f.label :画像をアップロード %>
+                <%= f.file_field :image,  class: "form-control" %>
+            </div>
+            <div class="text-center">
+              <%= f.submit "投稿", class: "btn btn-primary" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
