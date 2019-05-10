@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  answer: MyString
+  content: MyText
+  hint01: MyString
+  hint02: MyString
+  hint03: MyString
+  image: MyString
+  user: one
+
+two:
+  answer: MyString
+  content: MyText
+  hint01: MyString
+  hint02: MyString
+  hint03: MyString
+  image: MyString
+  user: two
