@@ -1,4 +1,6 @@
 class PostController < ApplicationController
+  before_action set_post, only: %i(edit update)
+
   def new
     @post = Post.new
   end
@@ -14,11 +16,9 @@ class PostController < ApplicationController
   end
 
   def edit
-    @post = Post.find_by(id: params[:id)
   end
 
   def update
-    @post = Post.find_by(id: params[:id)
     if @post.update_attributes(post_params)
       redirect_to root
     else
@@ -32,4 +32,7 @@ class PostController < ApplicationController
     params.require(:post).permit(:answer, :content, :hint01, :hint02, :hint03, :image).merge(user: current_user)
   end
 
+  def set_post
+    @post = Post.find_by(id: params[:id])
+  end
 end
