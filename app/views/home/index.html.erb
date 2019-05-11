@@ -28,6 +28,7 @@
                             <p class="card-text"><%= post.content %></p>
                             <hr>
                             <p class="card-text">ヒント１：<%= post.hint01 %></p>
+                            <%= link_to "削除する", post, class: "btn btn-danger", method: :delete, data: { confirm: "削除しますか？"} %>
                         </div>
                     </div>
                 </div>
