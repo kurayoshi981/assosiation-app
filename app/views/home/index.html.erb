@@ -1,17 +1,36 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="card" style="width: 18rem;">
+        <div class="col-sm-4">
+            <div class="side-up">
+                <h2>ランキング</h2>
+            </div>
+            <div class="side-main">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">仮タイトル</h5>
+                            <hr><br>
+                            <p class="card-text">仮内容</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="main-up">
+                <h2>問題一覧<h2>
+            </div>
             <% @post.each do |post| %>
-            <% if post.image.present? %>
-                <%= image_tag post.image_url  %>
-            <% end %>
-            <div class="card-body">
-                <h5 class="card-title"><%= post.answer %></h5>
-                <p class="card-text"><%= post.content %></p>
-            </div>
-            <div class="card-footer">
-            <small class="text-muted"><%= post.hint01 %></small>
-            </div>
+                <div class="card" >
+                    <div class="card-body">
+                        <div class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-text"><%= post.content %></p>
+                            <hr>
+                            <p class="card-text">ヒント１：<%= post.hint01 %></p>
+                        </div>
+                    </div>
+                </div>
             <% end %>
         </div>
     </div>

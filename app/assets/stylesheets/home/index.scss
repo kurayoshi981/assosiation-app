@@ -1,0 +1,38 @@
+body {
+    color: #464e70;
+}
+
+.container-fluid {
+    background-color: #3cd0a6;
+    height: 732px;
+  }
+.row {
+    padding: 20px 20px 0;
+ }
+.col-sm-4 {
+   margin: 0 auto; 
+ }
+.side-up h2{
+    text-align: center;
+ }
+.card {
+  margin: 10px auto;
+  border-radius: 15px;
+  background-color:  #f8f4e6;
+  }
+.main-up h2{
+    text-align: center;  
+}
+.card-body {
+    margin-bottom: 20px; 
+    display: flex;
+}
+.card-icon {
+    height: 100px;
+    width: 100px;
+    background-color:#3caed0;
+    margin-right: 20px;
+}
+.card-content {
+    width: 100%;
+}
