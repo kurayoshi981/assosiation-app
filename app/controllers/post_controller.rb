@@ -1,5 +1,5 @@
 class PostController < ApplicationController
-  before_action :set_post, only: %i(edit update destroy)
+  before_action :set_post, only: %i(edit update destroy show)
 
   def new
     @post = Post.new
@@ -13,6 +13,9 @@ class PostController < ApplicationController
       @post.valid?
       render action: :new
     end
+  end
+
+  def show
   end
 
   def edit

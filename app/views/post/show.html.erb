@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="main-up">
+                <h2>問題<h2>
+            </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-text"><%= @post.content %></p>
+                            <hr>
+                            <p class="card-text">ヒント１：<%= @post.hint01 %></p>
+                            <p class="card-text">ヒント１：<%= @post.hint02 %></p>
+                            <p class="card-text">ヒント１：<%= @post.hint03 %></p>
+                            <%= link_to "削除する", @post, class: "btn btn-danger", method: :delete, data: { confirm: "削除しますか？"} %>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

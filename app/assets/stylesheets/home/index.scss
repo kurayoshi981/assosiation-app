@@ -1,13 +1,16 @@
 body {
     color: #464e70;
+    margin: 0;
+    padding: 0;
+    background: #3cd0a6;
 }
 
-.container-fluid {
-    background-color: #3cd0a6;
+.container {
+    // background-color: #3cd0a6;
     height: 732px;
   }
 .row {
-    padding: 20px 20px 0;
+    padding: 50px 100px 0;
  }
 .col-sm-4 {
    margin: 0 auto; 
