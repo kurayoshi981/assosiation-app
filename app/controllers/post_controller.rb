@@ -23,7 +23,7 @@ class PostController < ApplicationController
 
   def update
     if @post.update_attributes(post_params)
-      redirect_to root
+      redirect_to :root
     else
       @post.valid?
       render action: :edit
