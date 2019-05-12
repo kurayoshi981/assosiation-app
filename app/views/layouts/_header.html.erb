@@ -14,8 +14,12 @@
           <%= link_to '投稿する', new_post_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
+        <%= link_to 'マイページ', user_path(current_user), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to 'ログアウト', destroy_user_session_path, class: "nav-link", method: :delete %>
         </li>
+
         <% else %>
           <li class="nav-item">
             <%= link_to '新規登録', new_user_registration_path, class: "nav-link" %>
