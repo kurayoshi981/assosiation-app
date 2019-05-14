@@ -1,5 +1,8 @@
 <% @comments.each do |comment| %>
     <% unless comment.id.nil? %>
         <h4><%= comment.guestsHint %></h4>
+        <% if comment.user == current_user %>
+        <p><%= link_to 'コメントを削除する', post_comment_path(comment.post_id, comment.id), method: :delete %></p>
+      <% end %>
     <% end %>
 <% end %>

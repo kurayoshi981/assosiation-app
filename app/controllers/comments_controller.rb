@@ -8,6 +8,13 @@ class CommentsController < ApplicationController
         end
     end
 
+    def destroy
+        @comment = Comment.find(params[:id])
+        if @comment.destroy
+            redirect_to :root
+        end
+    end
+
     private
 
     def comment_params
