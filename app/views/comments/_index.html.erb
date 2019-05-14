@@ -1,0 +1,5 @@
+<% @comments.each do |comment| %>
+    <% unless comment.id.nil? %>
+        <p>コメント:<%= comment.guestsHint %></p>
+    <% end %>
+<% end %>

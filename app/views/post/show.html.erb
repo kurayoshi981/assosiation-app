@@ -15,12 +15,8 @@
                         <hr>
                     </div>
                     <div class="card-guestsHint">
-                    <% @comments.each do |comment| %>
-                        <% unless comment.id.nil? %>
-                            <p>コメント:<%= comment.guestsHint %></p>
-                        <% end %>
-                    <% end %>
-                      <hr>
+                    <%= render partial: 'comments/index', locals: { comments: @comments } %>
+                    <hr>
                     </div>
                         <%= link_to "編集する", edit_post_path, class: "btn btn-primary" %>
                         <%= link_to "削除する", @post, class: "btn btn-danger", method: :delete, data: { confirm: "削除しますか？"} %>
