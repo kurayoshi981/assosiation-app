@@ -1,5 +1,5 @@
 <% @comments.each do |comment| %>
     <% unless comment.id.nil? %>
-        <p>コメント:<%= comment.guestsHint %></p>
+        <h4><%= comment.guestsHint %></h4>
     <% end %>
 <% end %>
