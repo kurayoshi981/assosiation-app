@@ -1,0 +1,9 @@
+<%= form_with(model: [post, comment])  do |f| %>
+    <div class="form-group">
+        <%= f.label :ヒント %>
+        <%= f.text_field :guestsHint, autofocus: true , class: "form-control", placeholder: "ヒントを追加する" %>
+    </div>
+    <div class="text-center">
+        <%= f.submit "ヒントを追加", class: "btn btn-primary" %>
+    </div>
+<% end %>
