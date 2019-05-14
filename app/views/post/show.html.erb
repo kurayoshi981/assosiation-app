@@ -14,7 +14,14 @@
                         <p class="card-text">ヒント１：<%= @post.hint01 %>, ヒント2：<%= @post.hint02 %>, ヒント3：<%= @post.hint03 %></p>
                         <hr>
                     </div>
-                  
+                    <div class="card-guestsHint">
+                    <% @comments.each do |comment| %>
+                        <% unless comment.id.nil? %>
+                            <p>コメント:<%= comment.guestsHint %></p>
+                        <% end %>
+                    <% end %>
+                      <hr>
+                    </div>
                         <%= link_to "編集する", edit_post_path, class: "btn btn-primary" %>
                         <%= link_to "削除する", @post, class: "btn btn-danger", method: :delete, data: { confirm: "削除しますか？"} %>
                     </div>
